@@ -1,9 +1,9 @@
 import cv2
 import pathlib
 
-cascade_path = pathlib.Path(cv2.__file__).parent.absolute() / "data/haarcascade_frontalface_default.xml"
+cascade_path = '/usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml'
 
-clf =cv2.CascadeClassifier(str(cascade_path))
+clf = cv2.CascadeClassifier(cascade_path)
 
 camera = cv2.VideoCapture(0)
 
